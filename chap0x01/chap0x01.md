@@ -57,7 +57,7 @@
 
     ![](images/multi-debian.PNG)
 
-    ![](images/multi-Kali.PNG)
+    ![](images/multi-kali.PNG)
 
     ![](images/multi-xp.PNG)
 
