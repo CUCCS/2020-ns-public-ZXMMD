@@ -57,9 +57,9 @@
 
     ![](images/multi-debian.PNG)
 
-    ![](images/multi-debian.PNG)
+    ![](images/multi-Kali.PNG)
 
-    ![](images/multi-debian.PNG)
+    ![](images/multi-xp.PNG)
 
   - 使用多重加载的系统映像创建所需实验机
 
@@ -238,11 +238,11 @@ root@Debian:/etc/dnsmasq.d# systemctl enable dnsmasq
 
 - intnet2
 
-  - Kali-victim-1访问Kali-Attacker
+  - Debian-victim-2访问Kali-Attacker
       
   ![](images/Debian-victim-2-pingAttacker.PNG)
 
-  - xp-victim-1访问Kali-Attacker
+  - xp-victim-2访问Kali-Attacker
       
   ![](images/xp-victim-2-pingAttacker.PNG)
 
