@@ -75,7 +75,7 @@
 
 ```bash
 # 编辑配置文件
-root@Debian:/home/zxmmd# vi /etc/network/interfaces
+vi /etc/network/interfaces
 # 将原有内容删除，粘贴以下内容
 
 # /etc/network/interfaces
@@ -121,35 +121,35 @@ iface enp0s10 inet static
 
 ```bash
 # 使配置规则生效
-root@Debian:/home/zxmmd# /sbin/ifup enp0s9
-root@Debian:/home/zxmmd# /sbin/ifup enp0s10
+/sbin/ifup enp0s9
+/sbin/ifup enp0s10
 
 # 重启主网卡
-root@Debian:/home/zxmmd# /sbin/ifdown enp0s3
-root@Debian:/home/zxmmd# /sbin/ifup enp0s3
+/sbin/ifdown enp0s3
+/sbin/ifup enp0s3
 ```
 
 ```bash
 # 安装dnsmasq
-root@Debian:/home/zxmmd# apt update && apt install dnsmasq
+apt update && apt install dnsmasq
 
 # 编辑配置文件
-root@Debian:/home/zxmmd# cd /etc/dnsmasq.d/
+cd /etc/dnsmasq.d/
 
-root@Debian:/etc/dnsmasq.d# vi gw-enp0s9.conf
+vi gw-enp0s9.conf
 # 添加以下内容
   # /etc/dnsmasq.d/gw-enp09.conf
   interface=enp0s9
   dhcp-range=172.16.111.100,172.16.111.150,240h
 
-root@Debian:/etc/dnsmasq.d# vi gw-enp0s10.conf
+vi gw-enp0s10.conf
 # 添加以下内容
   # /etc/dnsmasq.d/gw-enp010.conf
   interface=enp0s10
   dhcp-range=172.16.222.100,172.16.222.150,240h
 
 # 修改配置文件(做好备份)
-root@Debian:/etc/dnsmasq.d# vi /etc/dnsmasq.conf
+vi /etc/dnsmasq.conf
   # 将 #log-queries 这一行取消注释
   # 在 log-queries 下面一行添加：
       log-facility=/var/log/dnsmasq.log
@@ -157,10 +157,10 @@ root@Debian:/etc/dnsmasq.d# vi /etc/dnsmasq.conf
   # 将 #log-dhcp 这一行取消注释
 
 # 重启dnsmasq
-root@Debian:/etc/dnsmasq.d# systemctl restart dnsmasq
+systemctl restart dnsmasq
 
 # 将dnsmasq设置成开机启动
-root@Debian:/etc/dnsmasq.d# systemctl enable dnsmasq
+systemctl enable dnsmasq
 ```
 - 配置结果
   - IP地址
