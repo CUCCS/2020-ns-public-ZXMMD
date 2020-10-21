@@ -332,8 +332,9 @@ iptables -I INPUT -p udp --dport 53 -j DROP
 ### 遇到的问题
 
 - 无法使用`nc -l -u -p 53 < /etc/passwd `"打开"UDP端口
-   - 通过开启dnsmasq"打开"UDP端口
-
+   - 可以通过开启dnsmasq"打开"UDP端口
+   - 经过再次测试,发现这个命令可以"打开"UDP端口,不过当输入命令后,没有任何反应(如下图),并且当时没有看到预期的抓包效果,所以以为这个命令不行。
+   ![](images/problem.PNG)
 ### 参考
 
 - [2019-NS-Public-chencwx](https://github.com/CUCCS/2019-NS-Public-chencwx/tree/ns_chap0x05/ns_chapter5)
