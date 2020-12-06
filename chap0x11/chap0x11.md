@@ -71,7 +71,7 @@
 
   ![](./image/测试.PNG)
 
-+ 使用`docker image`指令查看镜像
++ 使用`docker images`指令查看镜像
 
   ![](./image/image.PNG)
 
